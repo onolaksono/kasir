@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'nama_lengkap' => 'Andre Law',
-                'email' => 'andrelaw.com',
+                'email' => 'andrelaw@gmail.com',
                 'password' => Hash::make('andre123'),
                 'hak_akses' => 'kasir',
             ]

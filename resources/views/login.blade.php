@@ -32,11 +32,12 @@
         .btn-custom {
             background: #74ebd5;
             border: none;
-            color: #fff;
+            color: #000000;
         }
 
         .btn-custom:hover {
             background: #60cdd8;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -51,26 +52,20 @@
                         <h3 class="fw-bold">Login</h3>
                         <p class="text-muted">Welcome back! Please login to your account.</p>
                     </div>
-                    <form>
+                    <form method="POST" action="/login">
+                        @csrf
                         <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Username" required />
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" name="email"
+                                placeholder="example@gmail.com" required />
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password"
-                                required />
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberMe" />
-                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Enter password" required />
                         </div>
                         <button type="submit" class="btn btn-custom w-100">Login</button>
                     </form>
-                    <div class="text-center mt-3">
-                        <small class="text-muted">Don't have an account? <a href="#"
-                                class="text-decoration-none">Sign up</a></small>
-                    </div>
                 </div>
             </div>
         </div>
