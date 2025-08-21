@@ -27,7 +27,8 @@ class LoginController extends Controller
             $hak_akses = Auth::user()->hak_akses;
             // cek hak akses
             if ($hak_akses == 'admin') {
-                echo "Selamat Datang Admin";
+                // menampilkan tampilan admin/home
+                return redirect()->intended('/admin/home');
             }elseif($hak_akses == 'kasir') {
                 echo "Selamat datang Kasir";
             }else{
